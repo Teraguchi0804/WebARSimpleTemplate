@@ -1,0 +1,38 @@
+<%
+// variable
+var ejsRoot = '../';
+var page = 'top';
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<%- include(ejsRoot + 'inc/_meta', {data:data,meta:data[page]}); %>
+<link rel="stylesheet" href="./assets/css/top/style.css">
+<script type='text/javascript' src='./assets/js/common/libs.js'></script>
+<script type='text/javascript' src="./assets/js/vendor/three.min.js"></script>
+<script type='text/javascript' src="./assets/js/vendor/spine-threejs.js"></script>
+
+<script src="./assets/js/jsartoolkit5/artoolkit.min.js"></script>
+<script src="./assets/js/jsartoolkit5/artoolkit.api.js"></script>
+<script src="./assets/js/threex/threex-artoolkitsource.js"></script>
+<script src="./assets/js/threex/threex-artoolkitcontext.js"></script>
+<script src="./assets/js/threex/threex-arbasecontrols.js"></script>
+<script src="./assets/js/threex/threex-armarkercontrols.js"></script>
+<script src="./assets/js/threex/threex-arsmoothedcontrols.js"></script>
+
+<script type='text/javascript' src='./assets/js/main.js'></script>
+</head>
+<body id="<%- page %>" class="top" data-id="top">
+<div id="wrapper">
+    <div class="main">
+        <section class="mvBox">
+            <div class="btnBox">
+                <div class="btnPlay">AR 起動</div>
+            </div>
+        </section>
+    </div>
+    <div id="stage"></div>
+</div>
+
+</body>
+</html>

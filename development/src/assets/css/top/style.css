@@ -1,0 +1,341 @@
+@charset 'UTF-8';
+/**
+  TOPページ
+ */
+.clearfix:after
+{
+    display: block;
+    clear: both;
+
+    content: ' ';
+}
+
+#fp-nav
+{
+    z-index: 1000 !important;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+{
+    font: inherit;
+    font-size: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    border: 0;
+}
+
+ol,
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+table
+{
+    font-size: 100%;
+}
+
+hr.separator
+{
+    display: none;
+}
+
+input,
+button,
+select,
+textarea
+{
+    resize: none;
+
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+
+    -webkit-appearance: none;
+}
+
+img
+{
+    vertical-align: bottom;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary
+{
+    display: block;
+}
+
+body
+{
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro';
+
+    margin: 0;
+}
+
+#wrapper
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px)
+{
+    video
+    {
+        z-index: 2;
+    }
+    #top
+    {
+        position: relative;
+    }
+    #top .main
+    {
+        position: relative;
+        z-index: 10;
+        top: 0;
+        right: 0;
+
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        background-color: #fff;
+    }
+    #top .main .mvBox
+    {
+        width: 100%;
+        height: 147.2vw;
+        margin-bottom: 23.6vw;
+    }
+    #top .main .mvBox .logo_jta
+    {
+        position: absolute;
+        top: 2.27vw;
+        right: 6.67vw;
+
+        width: 17.61vw;
+        height: auto;
+    }
+    #top .main .mvBox .logo_jta img
+    {
+        width: 100%;
+    }
+    #top .main .mvBox .mainTitle
+    {
+        width: 89.2vw;
+        height: auto;
+        margin: 0 auto 2.67vw;
+        padding-top: 10.67vw;
+    }
+    #top .main .mvBox .mainTitle img
+    {
+        width: 100%;
+    }
+    #top .main .mvBox .leadText
+    {
+        width: 69.74vw;
+        height: auto;
+        margin: 0 auto 4vw;
+    }
+    #top .main .mvBox .leadText img
+    {
+        width: 100%;
+    }
+    #top .main .mvBox .btnBox
+    {
+        width: 43.2vw;
+        height: auto;
+        margin: 0 auto 1.87vw;
+    }
+    #top .main .mvBox .btnBox .btnPlay
+    {
+        opacity: .4;
+    }
+    #top .main .mvBox .btnBox .btnPlay .btnText
+    {
+        width: 100%;
+        height: auto;
+    }
+    #top .main .mvBox .btnBox .btnPlay .btnText img
+    {
+        width: 100%;
+    }
+    #top .main .mvBox .desText
+    {
+        font-size: 3.2vw;
+        font-weight: bold;
+
+        margin-bottom: 16vw;
+
+        text-align: center;
+
+        color: #fff;
+    }
+    #top .main .mvBox .anchor_link
+    {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+
+        height: 9.34vw;
+        margin-top: -4.66vw;
+
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+                justify-content: center;
+    }
+    #top .main .mvBox .anchor_link .icon
+    {
+        display: block;
+
+        width: 4vw;
+        height: 4vw;
+        margin-right: .8vw;
+    }
+    #top .main .mvBox .anchor_link .icon img
+    {
+        width: 100%;
+
+        vertical-align: top;
+    }
+    #top .main .mvBox .anchor_link .text
+    {
+        font-size: 3.2vw;
+        font-weight: bold;
+        line-height: 1.0;
+
+        display: block;
+
+        text-decoration: underline;
+
+        color: #0097cf;
+    }
+    #top #stage
+    {
+        position: fixed;
+        z-index: 8;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 100vh;
+
+        pointer-events: none;
+    }
+    #top #stage canvas
+    {
+        overflow: hidden;
+
+        width: 100%;
+        height: auto;
+    }
+}

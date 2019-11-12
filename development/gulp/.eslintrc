@@ -1,0 +1,30 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+      "browser": true,
+      "es6": true,
+      "jquery": true
+  },
+  "globals": {
+      "TweenMax": true,
+      "Power1": true,
+      "Power2": true,
+      "Power3": true,
+      "Power4": true
+  },
+  "parserOptions": {
+     "ecmaVersion": 6,
+    "sourceType": "module",
+  },
+  "rules": { //0: チェックしない, 1: warning 2: error      
+      "no-console": 1, //コンソールを使用している
+      "no-alert": 1, //アラートを使用している
+      "quotes": [2, "single"], //シングルクオートを使用していない
+      "consistent-return": 1, //関数の戻り値に何も指定していない
+      "default-case": 1, //switch文でdefaultが設定されていない
+      "eqeqeq": 1, //「===, !==」ではなく「==,!=」を使用している
+      "camelcase": [2, {"properties": "always"}], //キャメルケースを使用していない
+      "no-unused-vars": 1, //使用していない変数がある
+      "no-undef": 0
+  }
+}

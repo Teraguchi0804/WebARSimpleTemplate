@@ -1,0 +1,31 @@
+{
+  "description": "description",
+  "keyword": "",
+  "ogpImgPath": "",
+  "copy": "",
+  "color": "",
+  "top": {
+    "title": "探しにいこう 沖縄(うちなー)の宝 with AR",
+    "description": "JTA機内限定のARコンテンツで宝の島・沖縄へ！",
+    "keyword": "",
+    "copy": "Copyright © 2019 Japan Transocean Air Co., Ltd. All rights reserved.",
+    "color": "",
+    "fb": {
+      "tit": "",
+      "des": "",
+      "img": "",
+      "siteName": "",
+      "type": "website",
+      "url": ""
+    },
+    "tw": {
+      "card": "summary_large_image",
+      "creator": "",
+      "des": "",
+      "img": "",
+      "siteName": "",
+      "tit": "",
+      "url": ""
+    }
+  }
+}
