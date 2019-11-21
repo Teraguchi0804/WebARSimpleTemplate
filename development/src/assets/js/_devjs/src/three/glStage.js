@@ -2,11 +2,9 @@
  * fileOverview:
  * Project:
  * File: glStage
- * Date: 19/06/27
+ * Date: 19/11/21
  * Author: Teraguchi
  */
-
-import { Howl, Howler } from 'howler';
 
 export default class glStage {
 	constructor() {
@@ -261,7 +259,7 @@ export default class glStage {
 			cameraParametersUrl: "assets/resource/data/camera_para.dat", // カメラパラメータファイル
 			detectionMode: "mono_and_matrix", // 検出モード（color/color_and_matrix/mono/mono_and_matrix）
 			imageSmoothingEnabled: true,   // 画像をスムージングするか（デフォルトfalse）
-			maxDetectionRate: 120,  // マーカの検出レート（デフォルト60）
+			maxDetectionRate: 120,  // マーカーの検出レート（デフォルト60）
 		});
 
 		this.context.init(function onCompleted() {                 									// コンテクスト初期化が完了したら
@@ -275,13 +273,13 @@ export default class glStage {
 	 */
 	_settingArMarkerControls() {
 		// ArMarkerControls（マーカと、マーカ検出時の表示オブジェクト）
-		let controls01 = new THREEx.ArMarkerControls(this.context, this.marker01, {    // マーカを登録
-			type: "pattern",                                    // マーカのタイプ
-			patternUrl: "assets/resource/data/hiro.patt",  // マーカファイル
+		let controls01 = new THREEx.ArMarkerControls(this.context, this.marker01, { // マーカーを登録
+			type: "pattern",                               // マーカーのタイプ
+			patternUrl: "assets/resource/data/hiro.patt",  // マーカーファイル
 			barcodeValue : null,
 			changeMatrixMode : 'modelViewMatrix',
 		});
-		this._scene.add(this.marker01);                             // マーカをシーンに追加
+		this._scene.add(this.marker01); // マーカーをシーンに追加
 	}
 
 	/**
@@ -417,11 +415,4 @@ export default class glStage {
 		}
 	}
 
-	/**
-	 * リサイズイベント
-	 * @public
-	 */
-	initArMarkerControls() {
-
-	}
 }
