@@ -71,10 +71,10 @@ export default class glStage {
 		this.setTimer = this._setTimer.bind(this);
 		this.clearTimer = this._clearTimer.bind(this);
 
-		this.isHarryInit = false;
-		this.harryTimer = null;
-		this.setHarryTimer = this._setHarryTimer.bind(this);
-		this.clearHarryTimer = this._clearHarryTimer.bind(this);
+		this.isAnimeInit = false;
+		this.animeTimer = null;
+		this.setAnimeTimer = this._setAnimeTimer.bind(this);
+		this.clearAnimeTimer = this._clearAnimeTimer.bind(this);
 
 		this.cameraInit = this._cameraInit.bind(this);
 		this._video = null;
@@ -90,7 +90,7 @@ export default class glStage {
 	}
 
 	/**
-	 *
+	 * 初期化
 	 * @public
 	 */
 	setup() {
@@ -129,23 +129,23 @@ export default class glStage {
 	}
 
 	/**
-	 * ハーリータイマーセット
+	 * アニメーションタイマーセット
 	 * @private
 	 */
-	_setHarryTimer() {
-		this.harryTimer = null;
-		this.harryTimer = setTimeout(() =>{
+	_setAnimeTimer() {
+		this.animeTimer = null;
+		this.animeTimer = setTimeout(() =>{
 			// アニメーションのフレームを0に戻す
 			this.skeletonMesh01.state.setAnimation(0, this.animation, false);
 		},5000);
 	}
 
 	/**
-	 * ハーリータイマークリア
+	 * アニメーションタイマークリア
 	 * @private
 	 */
-	_clearHarryTimer() {
-		clearInterval(this.harryTimer);
+	_clearAnimeTimer() {
+		clearInterval(this.animeTimer);
 	}
 
 	/**
@@ -293,6 +293,8 @@ export default class glStage {
 			lerpQuaternion: 0.3,
 			lerpScale: 1,
 		});
+
+		// マーカー検出イベント
 		this.smoothedControls01.addEventListener('becameVisible', () => {
 			console.log('マーカー01認識！！');
 			this.isAnimePlaying01 = true;
@@ -301,16 +303,18 @@ export default class glStage {
 				this.skeletonMesh01.state.setAnimation(0, this.animation, false);
 				this.isEnding01 = false;
 			} else {
-				this.clearHarryTimer();
+				this.clearAnimeTimer();
 			}
 			this.clearTimer();
 			this.isEnding03 = false;
 		});
+
+		// マーカーから外れたときイベント
 		this.smoothedControls01.addEventListener('becameUnVisible', () => {
 			console.log('マーカー01から外れました！！');
 			this.isAnimePlaying01 = false;
 			this.setTimer();
-			this.setHarryTimer();
+			this.setAnimeTimer();
 		});
 	}
 
