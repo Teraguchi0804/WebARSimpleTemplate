@@ -1,11 +1,11 @@
 {
-  "name": "norimaki_set",
+  "name": "WebARSimpleTemplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "http://gitlab.sonicjam.jp/at/jtadev/tree/develop"
+    "url": "https://github.com/Teraguchi0804/WebARSimpleTemplate/"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
