@@ -55,11 +55,8 @@ export default class glStage {
 		this.isEnding01 = false;
 
 		this.baseUrl = "assets/resource/data/";
-		//
 		this.skeletonMesh01 = null;
-		//
 		this.assetManager = null;
-		//
 
 		this.editFileName = this._editFileName.bind(this);
 
@@ -71,7 +68,6 @@ export default class glStage {
 		this.setTimer = this._setTimer.bind(this);
 		this.clearTimer = this._clearTimer.bind(this);
 
-		this.isAnimeInit = false;
 		this.animeTimer = null;
 		this.setAnimeTimer = this._setAnimeTimer.bind(this);
 		this.clearAnimeTimer = this._clearAnimeTimer.bind(this);
@@ -349,7 +345,6 @@ export default class glStage {
 				end: function(track) {},
 				disposed: function(track) {},
 				complete: function(track) {
-					// self.cameraClose();
 					self.isEnding01 = true;
 				},
 				event: function(track, event) {}
